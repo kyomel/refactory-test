@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Number 2</title>
+</head>
+<body>
+    Masukkan Bilangan:<input id="no_input"><br />
+    <button onclick="check_bil()">Click me</button>
+    <script>
+       function check_bil(){
+        let no;
+        no=Number(document.getElementById("no_input").value);
+            if(no%2==0){       
+                alert("Ini adalah Bilangan Genap");
+            } else {
+                alert("Ini adalah Bilangan Ganjil");
+            }
+    } 
+    </script>
+</body>
+</html>

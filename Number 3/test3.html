@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Number 4</title>
+</head>
+<body>
+    <form>
+        Nomor 1: <input type="text" name="nom1"> <br>
+        Nomor 2: <input type="text" name="nom2"> <br>
+        Nomor 3: <input type="text" name="nom3"> <br>
+          
+        Maksimum: <output id="max"></output>	<br> 
+        Rata-rata: <output id="avg"></output>	<br> 
+        Minimum: <output id="min"></output>	<br> 
+        <br><br>
+      </form>		
+      <button type="button" id="calc">Calculate</button>
+      
+      <script>
+        let nom1 = document.querySelector("[name='nom1']");
+        let nom2 = document.querySelector("[name='nom2']");
+        let nom3 = document.querySelector("[name='nom3']"); 
+      
+        let max = document.getElementById("max");
+        let avg = document.getElementById("avg");
+        let min = document.getElementById("min"); 
+        
+        let btn = document.getElementById("calc");
+        
+        
+        btn.addEventListener("click", function(){
+          maximum();
+          average();
+          minimum();
+        });
+      
+        function maximum() {
+          max.textContent = Math.max(nom1.value, nom2.value, nom3.value);  
+        }
+              
+        function average() {
+          avg.textContent = (+nom1.value + +nom2.value + +nom3.value) / 3
+        }
+          
+        function minimum() {
+          min.textContent = Math.min(nom1.value, nom2.value, nom3.value);  
+        }
+      </script>
+</body>
+</html>
